@@ -5,6 +5,6 @@
     "node-red": "*"
   },
   "scripts": {
-    "start": "node node_modules/node-red/red.js --port 80"
+    "start": "node_modules/node-red/red.js --port 80"
   }
 }
