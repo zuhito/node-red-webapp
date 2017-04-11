@@ -3,8 +3,5 @@
   "version": "0.0.1",
   "dependencies": {
     "node-red": "*"
-  },
-  "scripts": {
-    "start": "touch hogehogeenv.txt"
   }
 }
