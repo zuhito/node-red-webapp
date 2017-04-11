@@ -28,7 +28,7 @@ app.use(settings.httpAdminRoot,RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(settings.httpNodeRoot,RED.httpNode);
 
-server.listen(80);
+server.listen(process.env.port);
 
 // Start the runtime
 RED.start();
