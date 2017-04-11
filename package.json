@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "dependencies": {
     "node-red": "*",
+    "node-red-contrib-azure-documentdb": "*",
+    "node-red-contrib-azure-https": "*",
+    "node-red-contrib-azure-table-storage": "*",
+    "node-red-contrib-azure-blob-storage": "*",
+    "node-red-contrib-cognitive-services": "*",
+    "node-red-contrib-azure-sql": "*",
+    "node-red-contrib-azureiothubnode": "*",
     "express": "*"
   }
 }
