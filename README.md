@@ -14,6 +14,8 @@ This Node-RED includes nodes for Azure services.
 - node-red-contrib-azure-sql
 - node-red-contrib-azureiothubnode
 
+![node-red](https://raw.githubusercontent.com/zuhito/node-red-webapp/master/nodered.png)
+
 # Deploy to Azure Web App
 (1) Click deploy buttion
 
