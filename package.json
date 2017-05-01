@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "node-red": "*",
+    "node-red-contrib-browser-utils": "*",
     "node-red-dashboard": "*",
     "node-red-contrib-azure-documentdb": "*",
     "node-red-contrib-azure-https": "*",
