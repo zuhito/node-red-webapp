@@ -88,7 +88,7 @@
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "alwaysOn": true
+          "alwaysOn": "[and(not(contains(parameters('sku'), 'F')), not(contains(parameters('sku'), 'D')))]"
         }
       },
       "resources": [
