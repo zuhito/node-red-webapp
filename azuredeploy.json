@@ -85,7 +85,9 @@
         "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
       ],
       "properties": {
-        "serverFarmId": "[parameters('hostingPlanName')]"
+        "serverFarmId": "[parameters('hostingPlanName')]",
+        "webSocketsEnabled": true,
+        "alwaysOn": true
       },
       "resources": [
         {
@@ -98,9 +100,7 @@
           "properties": {
             "RepoUrl": "[parameters('repoURL')]",
             "branch": "[parameters('branch')]",
-            "IsManualIntegration": true,
-            "webSocketsEnabled": true,
-            "alwaysOn": true
+            "IsManualIntegration": true
           }
         }
       ]
