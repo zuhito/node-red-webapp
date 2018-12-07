@@ -86,8 +86,10 @@
       ],
       "properties": {
         "serverFarmId": "[parameters('hostingPlanName')]",
-        "webSocketsEnabled": true,
-        "alwaysOn": true
+        "siteConfig": {
+          "webSocketsEnabled": true,
+          "alwaysOn": true
+        }
       },
       "resources": [
         {
