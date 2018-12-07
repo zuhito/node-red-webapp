@@ -19,7 +19,7 @@ This Node-RED includes nodes for Azure services.
 # Deploy to Azure Web App
 (1) Click deploy button
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fzuhito%2Fnode-red-webapp%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhorihiro%2Fnode-red-webapp%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.svg"/>
 </a><br><br>
 
