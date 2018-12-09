@@ -17,8 +17,6 @@
     "sku": {
       "type": "string",
       "allowedValues": [
-        "F1",
-        "D1",
         "B1",
         "B2",
         "B3",
@@ -27,10 +25,9 @@
         "S3",
         "P1",
         "P2",
-        "P3",
-        "P4"
+        "P3"
       ],
-      "defaultValue": "S1",
+      "defaultValue": "B1",
       "metadata": {
         "description": "The pricing tier for the hosting plan."
       }
@@ -67,12 +64,17 @@
       "apiVersion": "2015-08-01",
       "name": "[parameters('hostingPlanName')]",
       "type": "Microsoft.Web/serverfarms",
+      "kind": "linux",
       "location": "[resourceGroup().location]",
       "sku": {
-        "name": "[parameters('sku')]",
-        "capacity": "[parameters('workerSize')]"
+        "Tier": "small",
+        "Name": "[parameters('sku')]"
       },
       "properties": {
+        "workerSizeId": "[parameters('workerSize')]",
+        "reserved": true,
+        "numberOfWorkers": "1",
+        "hostingEnvironment": "",
         "name": "[parameters('hostingPlanName')]"
       }
     },
@@ -87,8 +89,10 @@
       "properties": {
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
+          "linuxFxVersion": "NODE|10.10",
+          "appCommandLine": "/home/site/wwwroot/app.js",
           "webSocketsEnabled": true,
-          "alwaysOn": "[and(not(contains(parameters('sku'), 'F')), not(contains(parameters('sku'), 'D')))]"
+          "alwaysOn": true
         }
       },
       "resources": [
