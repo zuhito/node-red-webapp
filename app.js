@@ -1,18 +1,18 @@
-var http = require('http');
-var express = require("express");
-var RED = require("node-red");
+const http = require('http');
+const express = require("express");
+const RED = require("node-red");
 
 // Create an Express app
-var app = express();
+const app = express();
 
 // Add a simple route for static content served from 'public'
 app.use("/",express.static("public"));
 
 // Create a server
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 // Create the settings object - see default settings.js file for other options
-var settings = {
+const settings = {
     httpAdminRoot:"/",
     httpNodeRoot: "/",
     userDir:".",
